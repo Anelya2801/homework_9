@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+</head>
+<body>
+    <div id="strings">
+        <div id="string">Ядра в вёдра, выдру в тундру!</div>
+        <div id="string">Выдрав с выдры в тундре гетры</div>
+        <div id="string">В недрах тундры, выдры в гетрах </div>
+        <div id="string">Вытру гетрой выдре морду </div>
+        <div id="string">Тырят в вёдра ядра кедров!</div>
+        <div id="string">Вытру выдрой ядра кедров</div>
+    </div>
+    
+
+
+    <script>
+        const listParent = document.querySelector('#strings');
+        const list = document.querySelectorAll('#string');
+
+        listParent.insertBefore(list[2], list[0]);
+        listParent.insertBefore(list[4], list[0]);
+        listParent.insertBefore(list[1], list[0]);
+        listParent.insertBefore(list[5], list[0]);
+        listParent.insertBefore(list[3], list[0]);
+        listParent.insertBefore(list[6], list[0]);
+    </script>
+</body>
+</html>

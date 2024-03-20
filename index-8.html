@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+</head>
+<body>
+   
+    <script>
+       function createChessBoard(chessSize) {
+        const boardSize = 8; 
+        const board = document.createElement('div');
+        board.style.width = `${chessSize * boardSize}px`; 
+        board.style.height = `${chessSize * boardSize}px`; 
+        board.style.border = '1px solid black'; 
+
+        for (let i = 0; i < boardSize; i++) {
+            for (let j = 0; j < boardSize; j++) {
+                const chess = document.createElement('div');
+                chess.style.width = `${chessSize}px`; 
+                chess.style.height = `${chessSize}px`;
+                chess.style.float = 'left'; 
+                chess.style.boxSizing = 'border-box'; 
+
+                if ((i + j) % 2 === 0) {
+                    chess.style.backgroundColor = 'white';
+                } else {
+                    chess.style.backgroundColor = 'black';
+                }
+
+                board.appendChild(chess); 
+            }
+        }
+
+        return board;
+    }
+
+    const chessSize = 20; 
+    const chessBoard = createChessBoard(chessSize);
+    document.body.appendChild(chessBoard);
+   </script>
+</body>
+</html>

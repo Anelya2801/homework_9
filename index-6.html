@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+</head>
+<body>
+
+    <script>
+        const todoList = document.createElement('ul');
+
+        document.body.insertBefore(todoList, document.querySelector('script'));
+        while (true) {
+            let list = prompt('Enter a list:', '');
+            if (list === null || list === '') {
+                break;
+            }
+
+            let listItem = document.createElement('li');
+            listItem.textContent = list;
+            todoList.appendChild(listItem);
+        }
+   </script>
+</body>
+</html>
